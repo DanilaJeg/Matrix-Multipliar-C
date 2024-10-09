@@ -27,8 +27,15 @@ int main(int argc, char *argv[]){
             AB_matrix[i][j] = 0;
         }
     }
-    multiply_matrix(n, n2, m, m2, A_matrix, B_matrix, AB_matrix);
-    print_matrix(n, m2, AB_matrix);
+    
+    if (n == m2){
+        multiply_matrix(n, n2, m, m2, A_matrix, B_matrix, AB_matrix);
+        print_matrix(n, m2, AB_matrix);
+    }
+    else{
+        printf("Invalid matrix input.\n");
+        return 0;
+    }
 
     return 0;
 }
